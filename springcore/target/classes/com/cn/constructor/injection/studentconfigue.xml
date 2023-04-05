@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="department"
+		class="com.cn.constructor.injection.Department">
+		<constructor-arg>
+			<props>
+				<prop key="1">chemistry</prop>
+				<prop key="2">physics</prop>
+			</props>
+		</constructor-arg>
+	</bean>
+	<bean id="student" class="com.cn.constructor.injection.Student">
+		<constructor-arg value="Chandan" />
+		<constructor-arg value="1" />
+		<constructor-arg value="Kolkata" />
+
+		<constructor-arg>
+			<list>
+				<value>book1</value>
+				<value>book2</value>
+			</list>
+		</constructor-arg>
+
+		<constructor-arg>
+			<set>
+				<value>9876543222</value>
+				<value>7654328837</value>
+			</set>
+		</constructor-arg>
+
+		<constructor-arg>
+			<map>
+				<entry key="1" value="java" />
+				<entry key="2" value="python" />
+			</map>
+		</constructor-arg>
+		
+		<constructor-arg ref="department"></constructor-arg>
+	</bean>
+</beans>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="department1" class="com.cn.setter.injection.Department">
+		<property name="branch" value="MCA" />
+	</bean>
+
+	<bean id="student" class="com.cn.setter.injection.Student">
+		<property name="name" value="Chandan" />
+		<property name="rollno" value="100" />
+		<property name="marks" value="500" />
+		<property name="department" ref="department1" />
+	</bean>
+	<!--  <bean id="student1" class="com.cn.setter.injection.Student">
+		<property name="name" value="Chiku" />
+		<property name="rollno" value="101" />
+		<property name="marks" value="550" />
+	</bean>-->
+</beans>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ <bean id ="triangle" class="com.cn.springcore.Triangle">
+<!-- <property name="type" value="Equilateral"/>
+ <property name="length" value= '10'/>
+ <property name="breath" value="20"/>
+ <property name="height" value = "10.5"/> --> 
+ <constructor-arg value="Equilateral"/>
+ 
+ </bean>
+ 
+ </beans>

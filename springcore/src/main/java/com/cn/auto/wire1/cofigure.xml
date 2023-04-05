@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:p="http://www.springframework.org/schema/p"
+        xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+        
+        <bean id ="address" class="com.cn.auto.wire1.Address" p:id="1" p:name="Chandan"/>
+        <!--  <bean id ="address1" class="com.cn.auto.wire1.Address" p:id="2" p:name="Chiku"/>-->
+        
+        <!-- we can use autowire only for object type not for primitive and string values 
+             byName, byType,constructor-->
+             
+      <!-- <bean id="employee" class="com.cn.auto.wire1.Employee" autowire="byName"/> -->  
+       
+        <bean id="employee" class="com.cn.auto.wire1.Employee" autowire="byType"/>
+        
+        <!--   <bean id="employee" class="com.cn.auto.wire1.Employee" autowire="constructor"/> -->
+        
+        
+</beans>

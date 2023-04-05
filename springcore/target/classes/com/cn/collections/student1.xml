@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="student" class="com.cn.collections.Student">
+		<property name="studentName" value="cn" />
+
+		<property name="address">
+			<list>
+				<value>Jajpur</value>
+				<value>Jajpur</value>
+				<value>Kolkata</value>
+				<null />
+
+			</list>
+
+		</property>
+
+		<property name="phones">
+			<set>
+				<value>99876542</value>
+				<value>99876542</value>
+				<null />
+
+			</set>
+		</property>
+
+		<property name="courses">
+			<map>
+				<entry key="Java" value="2" />
+				<entry key="python" value="1" />
+			</map>
+		</property>
+
+		<property name="props">
+			<props>
+				<prop key="1">Chandan</prop>
+				<prop key="2">chiku</prop>
+			</props>
+		</property>
+
+
+	</bean>
+</beans>
